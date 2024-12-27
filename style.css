@@ -40,11 +40,6 @@
 }
 
 .result {
-    overflow-x: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 500px;
     margin-top: 20px;
     line-height: 1.6;
     word-break: break-all;
