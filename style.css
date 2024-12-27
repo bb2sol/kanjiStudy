@@ -1,0 +1,57 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.checkbox_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    span {
+        flex: 0 0 auto;
+        width: 50px;
+    }
+
+    input {
+        width: 20px;
+        height: 20px;
+    }
+
+    label {
+        padding-left: 5px;
+        font-size: 20px;
+    }
+}
+
+.btn_task {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+.result {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    margin-top: 20px;
+    line-height: 1.6;
+    word-break: break-all;
+    font-size: 30px;
+
+    div {
+        flex: 1 1 auto;
+        width: 33%;
+    }
+}
