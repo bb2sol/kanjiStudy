@@ -104,9 +104,18 @@ function showKanji() {
     const shuffledKanji = shuffleArray([...combinedKanji]);
     
     // 한 줄에 한 글자씩 표시
-    document.querySelector('.result').innerHTML = shuffledKanji.map((kanji, index) => 
-        `<div>${index + 1}. ${kanji}</div>`
+    document.querySelector('.result_inner').innerHTML = shuffledKanji.map((kanji, index) => 
+        `<div>
+            <span class="index">${index + 1}</span>
+            <span>${kanji}</span>
+        </div>`
     ).join('');
+
+    document.querySelector('.result_inner').style.height = 'auto';
+    let height = document.querySelector('.result_inner').scrollHeight;
+    if (height > document.querySelector('.result').clientHeight) {
+        document.querySelector('.result_inner').style.height = Math.ceil((height / 2) / 100) * 100 + 'px';
+    }
 }
 
 function addEvents() {

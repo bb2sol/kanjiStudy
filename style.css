@@ -4,14 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
 
 .wrap {
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
-    margin: 20px auto;
+    height: 100%;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .checkbox_wrap {
+    flex: 0 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -34,19 +41,43 @@
 }
 
 .btn_task {
+    flex: 0 0 auto;
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
 }
 
 .result {
+    overflow: auto;
+    flex: 1 1 auto;
+    
     margin-top: 20px;
     line-height: 1.6;
     word-break: break-all;
     font-size: 30px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
 
-    div {
-        flex: 1 1 auto;
-        width: 33%;
+    .result_inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+
+        div {
+            flex: 0 0 auto;
+            width: 50%;
+            height: 50px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+
+            .index {
+                display: inline-block;
+                width: 80px;
+                height: 100%;
+                border-right: 1px solid #000;
+                text-align: center;
+            }
+        }
     }
 }
